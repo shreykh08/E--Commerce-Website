@@ -1,0 +1,46 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  width: 100%;
+  --section-padding-x: min(144px, 10vw);
+
+  font-family: "Blinker", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  max-width: 1536px;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+}
+.light-mode {
+  --background-color: rgb(255, 255, 255);
+}
+.dark-mode {
+  --background-color: rgb(15, 23, 42);
+}
+.main {
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+  padding-top: calc(clamp(3rem, 10vw, 4rem) + 2.75rem);
+  padding-bottom: calc(clamp(3rem, 10vw, 4rem) + 2.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media (max-width: 768px) {
+  #root {
+    --section-padding-x: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  #root {
+    --section-padding-x: 0.5rem;
+  }
+  .main {
+    padding-top: calc(clamp(3rem, 10vw, 4rem) + 1.5rem);
+  }
+}
