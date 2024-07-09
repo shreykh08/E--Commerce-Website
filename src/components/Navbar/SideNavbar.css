@@ -1,0 +1,35 @@
+.side-navbar {
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  display: none;
+  right: 0;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  z-index: 15;
+}
+.side-navbar-links {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+.hide-side-navbar {
+  width: 0;
+}
+.side-navbar-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .side-navbar {
+    display: block;
+  }
+}
